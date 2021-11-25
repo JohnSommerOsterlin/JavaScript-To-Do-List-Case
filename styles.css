@@ -11,6 +11,7 @@ body {
 h2 {
     margin: 25% 0 5% 7%;
     font-size: 2.5rem;
+    color: rgb(26, 26, 26);
 }
 
 .input-flexbox {
@@ -31,9 +32,8 @@ h2 {
     border: none;
 }
 
-#add-btn {
-    margin-left: 58%;
-    margin-top: 30px;
+.add-btn {
+    margin: 20px 20px 50px 230px;
     padding: 10px 30px 10px 30px;
     border: none;
     border-radius: 30px;
@@ -41,4 +41,18 @@ h2 {
     box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, .288);
     color: rgb(238, 236, 236);
     font-weight: 700;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    background-color: #dde1e7;
+    padding: 15px 0 15px 40px;
+    margin: 0 10px 10px 10px;
+    box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, .288);
+    border-radius: 30px;
+    list-style-type: none;
 }
