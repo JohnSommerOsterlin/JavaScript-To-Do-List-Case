@@ -4,6 +4,7 @@ function newElement() {
   let li = document.createElement("li");
   let inputField = document.getElementById("inputField").value;
   let removeButton = document.createElement("button");
+  let inputFieldReset = document.getElementsByClassName("inputFieldContainer")
   removeButton.className = "closeLi";
 
   li.append(checkMark);
@@ -11,6 +12,7 @@ function newElement() {
   ulList.appendChild(li);
   li.appendChild(removeButton)
   removeButton.innerHTML = "&#10005";
+  console.log(inputFieldReset);
 
 }
 
