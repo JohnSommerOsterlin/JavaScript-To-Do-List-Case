@@ -64,20 +64,31 @@ ul {
 }
 
 li {
+    font-size: 17px;
     background-color: #dde1e7;
-    padding: 15px 40px 15px 40px;
+    padding: 15px 20px 15px 20px;
     margin: 0 10px 10px 10px;
     box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, .288);
     border-radius: 30px;
     list-style-type: none;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 20px 1fr 20px;
 }
+
+li span {
+    /* display: none; */
+    visibility: hidden;
+}
+li span.checkMarkSpan {
+    visibility: visible;
+}
+
 
 li.highlight {
     box-shadow: inset -3px -3px 7px #ffffff73, inset 3px 3px 5px rgba(94, 104, 121, .288);
-    text-decoration: line-through;
+    /* text-decoration: line-through; */
 }
+
 
 li > button {
     border: none;
@@ -88,4 +99,8 @@ li > button {
 
 .checkbox {
     background-color: deeppink;
+}
+
+.closeLi {
+    text-decoration: none;
 }
