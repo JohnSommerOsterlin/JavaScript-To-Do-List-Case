@@ -31,6 +31,9 @@ h2 {
     border-radius: 30px;
     border: none;
 }
+#inputField:focus {
+    outline: 0;
+}
 
 #add-btn {
     margin: 20px 20px 50px 230px;
@@ -76,7 +79,6 @@ li {
 }
 
 li span {
-    /* display: none; */
     visibility: hidden;
 }
 li span.checkMarkSpan {
@@ -95,12 +97,4 @@ li > button {
     background-color: #dde1e7;
     font-size: 16px;
     font-weight: 800;
-}
-
-.checkbox {
-    background-color: deeppink;
-}
-
-.closeLi {
-    text-decoration: none;
 }
