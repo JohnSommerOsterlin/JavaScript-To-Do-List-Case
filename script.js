@@ -1,6 +1,9 @@
 function newElement() {
   // CREATING LIST ITEM
   let li = document.createElement("li");
+
+  // MAKE DRAGGABLE LIST ITEM
+  li.setAttribute("draggable", "true");
   let inputField = document.getElementById("inputField").value;
 
   // CREATING SPAN ELEMENT
@@ -17,7 +20,7 @@ function newElement() {
   li.append(checkMark);
   li.append(inputField);
   ulList.appendChild(li);
-  li.appendChild(removeButton)
+  li.appendChild(removeButton);
   removeButton.innerHTML = "&#10005"; 
 }
 
@@ -26,7 +29,7 @@ function newElement() {
 }
 
 
-// UNORDERED LIST
+// UNORDERED LIST VARIABLE
 let ulList = document.getElementById("ulList");
 
 // MARKED COMPLETE & REMOVE LIST ITEM
@@ -35,11 +38,10 @@ ulList.addEventListener("click", function (event) {
   // REMOVE LIST ITEM
   if (event.target.nodeName === "BUTTON") {
     event.target.parentElement.remove();
-
+  } 
   // MARKED COMPLETE LIST ITEM
-  } else {
+  else {
     event.target.firstElementChild.classList.toggle("checkMarkSpan");
     event.target.classList.toggle("highlight");
-    console.log(event.target);
   } 
-})
+});
