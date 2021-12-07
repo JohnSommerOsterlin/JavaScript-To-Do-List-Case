@@ -1,8 +1,11 @@
 function newElement() {
   // CREATING LIST ITEM
   let li = document.createElement("li");
+  li.id = countId;
+  countId++;
+  li.className = "draggable";
 
-  // MAKE DRAGGABLE LIST ITEM
+  // CREATING DRAGGABLE LIST ITEM
   li.setAttribute("draggable", "true");
   let inputField = document.getElementById("inputField").value;
 
@@ -29,8 +32,12 @@ function newElement() {
 }
 
 
+
 // UNORDERED LIST VARIABLE
 let ulList = document.getElementById("ulList");
+
+// UNIQUE LIST ITEM IDs
+let countId = 0;
 
 // MARKED COMPLETE & REMOVE LIST ITEM
 ulList.addEventListener("click", function (event) {
@@ -45,3 +52,19 @@ ulList.addEventListener("click", function (event) {
     event.target.classList.toggle("highlight");
   } 
 });
+
+
+// DRAG AND DROP LIST ITEM (NOT FINISHED)
+ulList.addEventListener("dragstart", function(event) {
+  console.log("dragstart", event.target);
+})
+
+ulList.addEventListener("dragover", function(event) {
+  // console.log("dragover", event.target);
+})
+
+ulList.addEventListener("dragend", function(event) {
+  event.preventDefault();
+  console.log("drop", event.target);
+})
+
